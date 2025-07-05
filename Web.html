@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patiño's Parrilla</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rosa-neon: #ff00cc;
+      --negro: #0d0d0d;
+      --gris: #1a1a1a;
+      --verde-wa: #25D366;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background-color: var(--negro);
+      color: white;
+    }
+    .logo-titulo {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      text-shadow: 0 0 15px var(--rosa-neon);
+    }
+    header {
+      background: linear-gradient(90deg, var(--rosa-neon), #111);
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background-color: #111;
+      padding: 15px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    nav a:hover { color: var(--rosa-neon); }
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .hero-logo {
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px var(--rosa-neon);
+    }
+    .section {
+      padding: 70px 20px;
+      text-align: center;
+    }
+    .section h2 {
+      color: var(--rosa-neon);
+      font-size: 2.2em;
+      margin-bottom: 40px;
+    }
+    .productos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+    .card {
+      background: var(--gris);
+      border: 2px solid var(--rosa-neon);
+      border-radius: 12px;
+      width: 260px;
+      padding: 25px;
+      box-shadow: 0 0 15px var(--rosa-neon);
+      transition: transform 0.3s ease, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.06);
+      box-shadow: 0 0 25px var(--rosa-neon);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #ff66dd;
+      font-size: 1.2em;
+    }
+    .slider-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .footer {
+      background-color: #111;
+      color: var(--rosa-neon);
+      text-align: center;
+      padding: 30px;
+      font-size: 1em;
+    }
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background-color: #25D366;
+      padding: 10px;
+      border-radius: 50%;
+      box-shadow: 0 0 15px #25D366;
+      z-index: 1000;
+    }
+    .whatsapp-icon {
+      width: 40px;
+      height: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="logo-titulo">Patiños Parrilla</header>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#menu">Menú</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section class="hero" id="inicio">
+    <img src="img/449bb87a-d900-4323-8847-f08696850055.png" alt="Logo personaje" class="hero-logo" />
+    <h1>¡Explosión de sabor en cada bocado!</h1>
+  </section>
+  <section class="section" id="menu">
+   <h2>HELADERÍA</h2>
+<div class="productos">
+  <div class="card" data-producto="Cholao">
+    <h3>Cholao</h3>
+    <img src="img/img Cholao.jpeg" class="slider-img" />
+    <p>hielo, Maracuya, banano, crema de leche, Guanabana, Piña, Leche condesada y Milo.</p>
+    <button class="btn-agregar">Agregar al pedido</button>
+  </div>
+
+  <div class="card" data-producto="Maracuyazo">
+    <h3>Maracuyazo</h3>
+    <img src="img/img maracuyazo.jpeg" class="slider-img" />
+    <p>Maracuyá natural con hielo, Crema de leche, Milo y Leche condensada.</p>
+    <button class="btn-agregar">Agregar al pedido</button>
+  </div>
+
+  <div class="card" data-producto="Guanabanazo">
+    <h3>Guanabanazo</h3>
+    <img src="img/img Guanabanazo.jpeg" class="slider-img" />
+    <p>Guanabana, Milo y Leche condensada</p>
+    <button class="btn-agregar">Agregar al pedido</button>
+  </div>
+
+  <div class="card" data-producto="Cóctel">
+    <h3>Cóctel</h3>
+    <img src="img/img coctel.jpeg" class="slider-img" />
+    <p>Frutas surtidas tropicales con hielo y decoración especial.</p>
+    <button class="btn-agregar">Agregar al pedido</button>
+  </div>
+
+  <div class="card" data-producto="Granizado">
+    <h3>Granizado</h3>
+    <img src="img/img granizado.jpeg" class="slider-img" />
+    <p>Hielo raspado con sabores a tu elección.</p>
+    <button class="btn-agregar">Agregar al pedido</button>
+  </div>
+</div>
+
+
+<h2 style="margin-top:80px;">COMIDA</h2>
+<div class="productos">
+  <div class="card" data-producto="Hamburguesa">
+    <h3>Hamburguesa</h3>
+    <img src="img/hamburguesa.jpg" class="slider-img" />
+    <p>Carne jugosa, queso de mejor calidad, tocineta, y receta de la casa.</p>
+    <button class="btn-agregar">Agregar al pedido</button>
+  </div>
+
+  <div class="card" data-producto="Pizza">
+    <h3>Pizza</h3>
+    <img src="img/img pizza.jpg" class="slider-img" />
+    <p>Base delgada, salsa especial, queso mozzarella y topping a elección.</p>
+    <button class="btn-agregar">Agregar al pedido</button>
+  </div>
+
+  <div class="card" data-producto="Carne al Barril">
+    <h3>Carne al Barril</h3>
+    <img src="img/carne al barril.jpg" class="slider-img" />
+    <p>Corte ahumado lentamente, tierno por dentro y crujiente por fuera.</p>
+    <button class="btn-agregar">Agregar al pedido</button>
+  </div>
+</div>
+
+
+    <section class="section" id="nosotros">
+    <h2>¿QUIÉNES SOMOS?</h2>
+    <p>Somos un negocio de barrio con alma callejera y sabor del futuro. Fusionamos tradición y estilo urbano en cada cholao y parrillada, En Patiño's Parrilla, cada receta está hecha para romper esquemas. ¡Del barrio pal mundo!</p>
+  </section>
+
+    <section class="section" id="contacto">
+    <h2>CONTÁCTANOS</h2>
+    <p>WhatsApp: +57 311 3233384</p>
+    <p>Instagram: @patinosparrilla</p>
+    <p>Dirección: Villa Maria 2500 Lotes</p>
+  </section>
+
+    <footer class="footer">
+    © 2025 Patiño Parrilla. Todos los derechos reservados.
+  </footer>
+
+  <a href="https://wa.me/573113233384" class="whatsapp-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="whatsapp-icon" alt="WhatsApp" />
+  </a>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const carrito = [];
+      document.querySelectorAll(".btn-agregar").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const producto = btn.closest(".card").dataset.producto;
+          carrito.push(producto);
+          alert(`✅ ${producto} agregado al pedido`);
+        });
+      });
+
+      const botonPedido = document.createElement("button");
+      botonPedido.textContent = "Enviar Pedido por WhatsApp";
+      botonPedido.style.cssText = "margin-top:30px; padding:10px 20px; background:#25D366; color:white; border:none; border-radius:8px; cursor:pointer;";
+      document.getElementById("menu").appendChild(botonPedido);
+
+      botonPedido.addEventListener("click", () => {
+        if (carrito.length === 0) return alert("Agrega al menos un producto.");
+        const mensaje = `Hola, quiero pedir esto:\n\n${carrito.map(p => `• ${p}`).join("\n")}`;
+        const url = `https://wa.me/573113233384?text=${encodeURIComponent(mensaje)}`;
+        window.open(url, "_blank");
+      });
+    });
+  </script>
+</body>
+</html>
